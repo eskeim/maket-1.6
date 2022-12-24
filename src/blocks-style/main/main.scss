@@ -1,0 +1,115 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background: $color-background;
+  margin-left: auto;
+  @media (min-width: 1120px) {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1440px) {
+    margin:  0 0 0 auto;
+    max-width: 1120px;
+  }
+    &__container {
+      @media(min-width: 1120px) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 42px;
+      }
+    }
+      &__name {
+        font-family: "TT Lakes Bold", serif;
+        font-weight: 700;
+        font-size: 28px;
+        margin-top: 24px;
+        margin-left: 16px;
+        position: relative;
+        @media(min-width: 768px) {
+          margin-left: 20px;
+        }
+        @media(min-width: 1120px) {
+          line-height: 40px;
+          margin-left: 30px;
+          padding-top: 0;
+          margin-top: 0;
+        }
+      }
+      &__name:before {
+        content: "";
+        background: $color-mint;
+        width: 4px;
+        height: 40px;
+        -webkit-border-top-right-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: -16px;
+        @media(min-width: 768px) {
+          left: -20px;
+        }
+        @media(min-width: 1120px) {
+          left: -30px;
+        }
+      }
+    &__button-container {
+      display: none;
+      @media(min-width: 1120px) {
+        display: flex;
+        flex-basis: 23%;
+        justify-content:  space-between;
+        margin-right: 20px;
+        align-items: center;
+      }
+    }
+      &__button {
+        @media(min-width:1120px) {
+          background: $color-background;
+          border: none;
+          cursor: pointer;
+          position: relative;
+          width: 40px;
+          height: 40px;
+          transition: $transition-button;
+        }
+      }
+      &__button:hover {
+        @include opacity-button;
+      }
+      &__button-repair {
+        @media(min-width: 1440px) {
+          background: url("../img/button/repair.svg");
+        }
+      }
+      &__button-repair:before {
+        @media(min-width: 1440px) {
+          content: "Оставить заявку";
+          font-family: "TT Lakes Medium", serif;
+          position: absolute;
+          top: 10px;
+          right: 60px;
+          width: 125px;
+          font-size: 16px;
+          letter-spacing:-0.2px;
+        }
+      }
+      &__button-checkstatus {
+        @media(min-width: 1440px) {
+          background: url("../img/button/checkstatus.svg")
+        }
+      }
+      &__button-checkstatus:before {
+        @media(min-width: 1440px) {
+          content: "Статус ремонта";
+          font-family: "TT Lakes Medium", serif;
+          position: absolute;
+          top: 10px;
+          right: 60px;
+          width: 125px;
+          font-size: 16px;
+          letter-spacing:-0.2px;
+        }
+      }
+
+}

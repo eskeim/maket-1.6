@@ -1,0 +1,146 @@
+.feedback {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background: $color-background;
+  position: fixed;
+  top:0;
+  right: 0;
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    position: relative;
+    background: $color-white;
+    @media(min-width: 768px) {
+      width: 440px;
+      box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+      border-left: 1px solid $color-mint;
+    }
+  }
+  &__overlay {
+    display: flex;
+    flex-basis: 1px;
+    height: 100%;
+    z-index: 4;
+    opacity: 0.96;
+    mix-blend-mode: normal;
+    flex-grow: 2;
+  }
+    &__button-close {
+      width: 40px;
+      height: 40px;
+      background: url("../img/button/burger-close.svg");
+      transition: $transition-button;
+      margin-top: 24px;
+      margin-left: 16px;
+      padding: 0;
+      @media (min-width: 768px) {
+        position: absolute;
+        top: 15px;
+        right: 470px;
+        z-index: 10;
+      }
+    }
+    &__button-close-hover:hover {
+      transform: rotate(360deg);
+      opacity: 0.5;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+        }
+      &__logo-name {
+        font-weight: bold;
+        color: $color-main;
+        line-height: 32px;
+        font-size: 24px;
+        letter-spacing: -0.6px;
+        margin-top: 40px;
+        margin-left: 16px;
+        position: relative;
+        @media (min-width: 768px) {
+          margin-left: 32px;
+        }
+      }
+      &__logo-name:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -16px;
+        width: 4px;
+        height: 40px;
+        border-radius: 4px;
+        background: $color-mint;
+        @media(min-width: 768px) {
+          left: -32px;
+        }
+      }
+      &__input {
+        min-width: 288px;
+        border-radius: 8px;
+        border: 1px solid $color-devider;
+        margin: 0 16px 16px 16px;
+        padding-left: 16px;
+        height: 48px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+      }
+      &__input-name {
+        margin-top: 24px;
+      }
+      &__input-message {
+        padding-top: 12px;
+        height: 118px;
+        flex-wrap: wrap;
+      }
+      &__info {
+        width: 288px;
+        height: 65px;
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-gray-light;
+        margin: 0 16px 19px 16px;
+        @media (min-width: 768px ) {
+          width: 376px;
+          height: 48px;
+          margin: 0 32px 19px 31px;
+        }
+      }
+
+        &__link {
+          color: $color-bloody;
+          transition: $transition-button;
+          }
+        &__link-hover:hover {
+          color: $color-mint;
+        }
+      &__input-submit {
+        width: 136px;
+        height: 32px;
+        border-radius: 16px;
+        padding-left: 16px;
+        border: 1px solid $color-devider;
+        background: $color-bloody url("../img/button/dropdown.svg") no-repeat 90% 50%;
+        color: $color-white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: left;
+        letter-spacing: -0.15px;
+        margin: 0 16px 0 auto;
+        transition: $transition-button;
+        cursor: pointer;
+      }
+      &__input-submit-hover:hover {
+        @include opacity-button;
+      }
+
+}
+.feedback-hidden {
+  display: none;
+}

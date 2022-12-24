@@ -1,0 +1,38 @@
+.disclaimer {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  @media (min-width: 1120px) {
+    width:1120px;
+
+  }
+  @media (min-width: 1440px) {
+    margin: 0 0 0 auto;
+  }
+  &__text {
+    display: flex;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $color-main;
+    width: 288px;
+    height: 138px;
+    margin: 16px auto 0 16px;
+    @media (min-width: 768px) {
+      width: 421px;
+      height: 60px;
+      margin: 24px auto 0 24px;
+    }
+    @media(min-width: 1120px) {
+      margin: 32px auto 0 32px;
+    }
+    @media (min-width: 1440px) {
+      display: flex;
+      margin: 32px auto 0 32px;
+
+    }
+  }
+
+}

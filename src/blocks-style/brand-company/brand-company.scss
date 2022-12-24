@@ -1,0 +1,165 @@
+.brands-company {
+  min-width: 320px;
+  max-width: 1120px;
+  height:  154px;
+  display: flex;
+  flex-direction: column;
+  background: $color-swiper;
+  position: relative;
+  @media (min-width: 768px) {
+    width: 768px;
+    height: max-content;
+  }
+  @media(min-width: 1120px) {
+    width: 1120px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: linear-gradient(270deg, $color-background 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    width: 24px;
+    height: 81px;
+    z-index: 5;
+  }
+    &__swiper {
+      width: 100%;
+      height: 154px;
+      padding: 16px 0 0 16px;
+      @media (min-width: 768px) {
+        min-width: 768px;
+        height: max-content;
+        padding: 24px 0 24px 0;
+      }
+      @media(min-width: 1120px) {
+        padding-bottom: 34px;
+      }
+    }
+      &__swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 90px;
+        padding-left: 24px;
+        @media(min-width: 768px) {
+          max-width: 768px;
+          flex-wrap: wrap;
+          height: max-content;
+          margin: 0 auto;
+          column-gap: 24px;
+          row-gap: 16px;
+          padding-left: 24px;
+        }
+        @media(min-width: 1120px) {
+          max-width: 1120px;
+          padding-left: 32px;
+          flex-basis: 1120px;
+          row-gap: 16px;
+          column-gap: 32px;
+        }
+      }
+        &__swiper-slide {
+          flex-basis: 240px;
+          max-height: 72px;
+          display: flex;
+          border-radius: 6px;
+          border: 1px solid $color-devider;
+          @media (min-width: 768px) {
+           flex-basis: 224px;
+          }
+          @media(min-width: 1120px) {
+            flex-basis: 240px;
+          }
+        }
+        &__swiper-slide-hidden-one {
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+          &__link {
+            display: flex;
+            flex-basis: 240px;
+            max-height: 72px;
+            text-decoration: none;
+            border-radius: 6px;
+            background: $color-white url("../img/links/arrow.svg") no-repeat 90% 50%;
+            @media(min-width: 768px) {
+              flex-basis: 224px;
+            }
+            @media (min-width: 1120px) {
+              flex-basis: 240px;
+            }
+          }
+          &__link-lenovo {
+            padding: 20px 16px;
+          }
+          &__link-samsung {
+            padding: 17px 16px;
+          }
+          &__link-apple {
+            padding: 12px 16px 16px 16px;
+          }
+          &__link-viewSonic {
+            padding: 26px 14px;
+          }
+          &__link-bosch {
+            padding: 21px 16px;
+          }
+          &__link-hp {
+            padding: 10px;
+          }
+          &__link-acer {
+            padding: 24px 16px;
+          }
+          &__link-sony {
+            padding: 24px 14px;
+          }
+        &__button {
+          transition: $transition-button;
+          position: relative;
+          margin-top: 24px;
+          margin-left: 20px;
+          @media(min-width: 1440px) {
+            margin-top: 30px;
+            margin-left: 55px;
+          }
+        }
+        &__button-arrow-down::before {
+            position: absolute;
+            top: 0;
+            left: -16px;
+            content: url("../img/button-before/read.svg");
+
+        }
+        &__button-arrow-up::before {
+            position: absolute;
+            left: -16px;
+            content: url("../img/button-before/read.svg");
+            transform: rotate(180deg);
+        }
+        &__button-hidden {
+          display: none;
+          @media(min-width:768px) {
+            display: flex;
+            position: relative;
+            border: none;
+            background: $color-swiper;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $color-main;
+            margin-left: 45px;
+            margin-top: 24px;
+          }
+        }
+        &__button-hover:hover {
+          @include opacity-button;
+        }
+
+        &__swiper-pagination {
+          transform: translateY(-20px);
+        }
+
+}

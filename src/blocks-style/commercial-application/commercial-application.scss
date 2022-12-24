@@ -1,0 +1,42 @@
+.commercial-application {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  @media (min-width: 1120px) {
+    width:1120px;
+  }
+  @media (min-width: 1440px) {
+    margin: 0 0 0 auto;
+  }
+  &__link {
+    display: flex;
+    width: 192px;
+    height: 55px;
+    background: url("../img/links/more.svg") no-repeat 60% 85%;
+    margin: 0 auto 0 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $color-main;
+    @media (min-width: 768px) {
+      width: 320px;
+      height: 24px;
+      margin: 16px auto 0 24px;
+      background: none;
+      position: relative;
+      &:after {
+        content: url("../img/links/more.svg");
+        top: 0;
+        right: 10px;
+      }
+    }
+    @media (min-width: 1120px) {
+      margin: 16px auto 0 32px;
+    }
+
+  }
+  &__link-hover:hover {
+    color: $color-bloody;
+  }
+}

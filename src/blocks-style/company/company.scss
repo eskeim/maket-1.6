@@ -1,0 +1,79 @@
+.company {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  &__text {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+    margin: 0 16px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    @media (min-width: 768px) {
+      flex-basis: 40%;
+      min-width: 312px;
+      max-height: 160px;
+      line-height: 20px;
+    }
+    @media (min-width: 1120px) {
+      flex-basis: 45%;
+      max-height: 160px;
+    }
+  }
+  &__text-two_disable-mobile {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__text-three_disable-mobile {
+    display: none;
+    @media (min-width: 1120px) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__button-read {
+    display: flex;
+    font-family: 'TT Lakes Medium', serif;
+    font-weight: 500;
+    margin-left: 33px;
+    letter-spacing: -0.2px;
+    padding: 0;
+    min-width: 100px;
+    background-color: $color-background;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    transition: $transition-button;
+    @media (min-width: 768px) {
+      margin-left: 35px;
+      margin-top: 10px;
+    }
+    @media (min-width: 1120px) {
+      margin-left: 30px;
+    }
+  }
+  &__button-read:before {
+    content: url('../img/button-before/read.svg');
+    position: absolute;
+    top: 5px;
+    left: -25px;
+  }
+  &__button-read:hover {
+    @include opacity-button;
+  }
+  &__button-text {
+    font-family: 'TT Lakes Medium', serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+  }
+}

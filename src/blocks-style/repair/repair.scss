@@ -1,0 +1,186 @@
+.repair {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  flex-basis: 320px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-top: 23px;
+  background: $color-background;
+  @media(min-width: 768px) {
+    width: 768px;
+    height: max-content;
+    margin: 23px auto 0 auto;
+    z-index: 1;
+  }
+  @media (min-width: 1120px) {
+    width: 1120px;
+    margin: 24px auto 0 auto;
+  }
+  @media (min-width: 1440px) {
+    width: 1120px;
+    margin: 24px 0 0 auto;
+  }
+  &__label {
+    background: linear-gradient(270deg, $color-white  0%,  $color-background 98.61%);
+    border-top: 1px solid $color-menu;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    @media(min-width: 768px) {
+      min-width: 768px;
+      height: 56px;
+    }
+  }
+    &__text {
+      margin: 16px;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      text-transform: uppercase;
+      color: $color-nav-links;
+      width: 288px;
+      font-weight: 400;
+      z-index: 1;
+      @media(min-width: 768px) {
+        min-width: 338px;
+        margin: 16px 0 16px 24px;
+      }
+      @media(min-width: 1120px) {
+        margin-left: 32px;
+      }
+    }
+  &__container {
+    min-width: 320px;
+    max-width: 1120px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    background: $color-swiper;
+    position: relative;
+    @media(min-width: 768px) {
+      width: 768px;
+      height: max-content;
+    }
+    @media(min-width: 1120px) {
+      width: 1120px;
+    }
+  }
+  &__container:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: linear-gradient(270deg, $color-background 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    width: 24px;
+    height: 166px;
+    z-index: 5;
+  }
+    &__swiper {
+      width: 100%;
+      height: 220px;
+      padding: 16px 0 0 16px;
+      @media(min-width: 768px) {
+        min-width: 768px;
+        height: max-content;
+        padding: 24px 0 24px 0;
+      }
+      @media(min-width: 1120px) {
+        padding-bottom: 34px;
+      }
+    }
+      &__swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 180px;
+        padding-left: 24.1px;
+        @media (min-width: 768px) {
+          max-width: 768px;
+          flex-wrap: wrap;
+          height: max-content;
+          margin: 0 auto;
+          column-gap: 24px;
+          row-gap: 16px;
+          padding-left: 24.1px;
+        }
+        @media (min-width: 1120px) {
+          max-width: 1120px;
+          padding-left: 32px;
+          flex-basis: 1120px;
+          row-gap: 16px;
+          column-gap: 32px;
+        }
+      }
+        &__swiper-slide {
+          flex-basis: 240px;
+          max-height: 160px;
+          display: flex;
+          border-radius: 6px;
+          border: 1px solid $color-devider;
+          background: $color-white;
+          @media (min-width: 768px) {
+            flex-basis: 224px;
+            height: 160px;
+          }
+          @media (min-width: 1120px) {
+            flex-basis: 240px;
+          }
+        }
+        &__swiper-slide-hidden {
+          @media(min-width: 768px) {
+            display: none;
+          }
+        }
+          &__link {
+            display: flex;
+            flex-basis: 240px;
+            max-height: 160px;
+            text-decoration: none;
+            border-radius: 6px;
+            background: $color-white url("../img/links/go.svg") no-repeat 90% 90%;
+            padding: 16px 0 0 16px;
+            @media(min-width: 768px) {
+              flex-basis: 224px;
+            }
+            @media(min-width: 1120px) {
+              flex-basis: 240px;
+            }
+          }
+      &__btn {
+        transition: $transition-button;
+        border: none;
+        background: $color-swiper;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $color-main;
+        margin-left: 45px;
+        margin-top: 24px;
+        position: relative;
+      }
+      &__btn-arrows-down:before {
+        position: absolute;
+        top: 0;
+        left: -14px;
+        content: url("../img/button-before/read.svg");
+      }
+      &__btn-arrows-up:before {
+        position: absolute;
+        left: -14px;
+        content: url("../img/button-before/read.svg");
+        transform: rotate(180deg);
+      }
+      &__btn-hidden {
+        display: none;
+        @media(min-width: 768px) {
+          display: flex;
+        }
+      }
+
+      &__btn-hover:hover {
+         @include opacity-button;
+      }
+
+}
