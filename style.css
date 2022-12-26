@@ -649,7 +649,9 @@ body {
     box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2); }
     @media (min-width: 1440px) {
       .side-menu__main-container {
-        box-shadow: none; } }
+        box-shadow: none;
+        height: 0;
+        min-height: 100vh; } }
   .side-menu__container-one {
     display: flex;
     flex-direction: column; }
