@@ -194,7 +194,9 @@ html {
   box-sizing: border-box;
   overflow: auto; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit; }
 
 a {
@@ -213,12 +215,13 @@ ul {
 body {
   max-width: 1440px;
   margin: 0 auto;
-  font-family: "TT Lakes Regular", serif;
+  font-family: 'TT Lakes Regular', serif;
   font-size: 16px;
   padding: 0;
   background: #F8F8F8;
   position: relative;
-  border-bottom-right-radius: 1px; }
+  border-bottom-right-radius: 1px;
+  overflow-x: hidden; }
 
 .blur {
   filter: blur(5px); }
@@ -265,7 +268,7 @@ body {
     align-content: center; }
   @media (min-width: 768px) {
     .menu__container-right {
-      flex-basis: 40%;
+      flex-basis: 50%;
       display: flex;
       justify-content: space-between; } }
   @media (min-width: 768px) {
@@ -564,7 +567,7 @@ body {
   .CPS-place__image-mobile {
     display: flex;
     align-self: flex-end;
-    margin: 15px auto;
+    margin-top: 20px;
     min-width: 320px;
     min-height: 200px; }
   @media (min-width: 768px) {
@@ -1824,7 +1827,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 320px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -1850,7 +1852,7 @@ body {
       margin: 80px 0 21px auto; } }
   .footer:before {
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 1px;
     background-color: #D9FFF5;
